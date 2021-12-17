@@ -1,0 +1,30 @@
+.btn {
+    display: inline-block;
+    padding: 0 35px;
+    border: 2px solid #B6391E;
+    background-color: transparent;
+    transition: 0.3s ease;
+    @media (max-width: 992px) {
+        padding: 0 24px;
+    }
+    &-el {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'HypatiaSansPro Regular';
+        font-size: 16px;
+        line-height: 40px;    
+        text-align: center;
+        text-transform: uppercase;
+        color: #B6391E;
+        transition: 0.3s ease;
+        @media (max-width: 992px) {
+            font-size: 14px;
+            line-height: 30px;
+        }
+    }
+    &:hover {
+        background-color: #B6391E;
+        & .btn-el {color: #fff;}
+    }
+}
