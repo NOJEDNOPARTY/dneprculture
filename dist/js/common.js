@@ -160,6 +160,7 @@ var common = {
 		
 	},
 	carousel: function(){
+
 		var bannerSlider = $('.banner-slider');
 
 		bannerSlider.owlCarousel({
@@ -170,52 +171,18 @@ var common = {
 			nav: true,
 			dots: true,
 			autoHeight: true,
-			animateOut: 'fadeOut',
-			animateIn: 'fadeIn',
 			autoplay:true,
 			autoplayTimeout: 4000
 		});
 
-		$('.classes-carousel').owlCarousel({
-			loop:true,
-			items: 1,
-			margin: 0,
-			nav: true,
-			dots: false
-		});
+		let slidesLength = bannerSlider.find('.owl-item').not('.cloned').length;
+		$('.banner-count-length').text(slidesLength);
+		bannerSlider.on('translated.owl.carousel', function(event) {
+			$('.banner-count-current').text(event.item.index - 1);
+		})
 
 
-		$('.gallery-slider-6').owlCarousel({
-			loop:true,
-			items:6,
-			margin:30,
-			nav:true,
-			dots: false,
-			responsive:{
-				0:{
-					items:2,
-					margin:15
-				},
-				550:{
-					items:3,
-					margin:15
-				},
-				768:{
-					items:3
-				},
-				1050:{
-					items:4
-				},
-				1250:{
-					items:5
-				},
-				1550:{
-					items:6
-				}
-			}
-		});
-
-		$('.gallery-slider-3').owlCarousel({
+		$('.gallery-slider').owlCarousel({
 			loop:true,
 			items:3,
 			margin:30,
@@ -237,42 +204,6 @@ var common = {
 			}
 		});
 
-		let cardsSlider = $('.cards-slider');
-		let newsPrevSlider = $('.news-prev-slider');
-
-		function cardsSliderInit(){
-			cardsSlider.owlCarousel({
-				loop:true,
-				items: 1,
-				autoHeight: true,
-				margin: 0,
-				nav: false,
-				dots: true
-			});
-			newsPrevSlider.owlCarousel({
-				loop:true,
-				items: 1,
-				autoHeight: true,
-				margin: 0,
-				nav: true,
-				dots: true,
-				0:{
-					items:1,
-					margin:0
-				},
-				600:{
-					items:2,
-					margin:20
-				}
-			});
-		}
-
-		$(window).scroll(function() {
-			$(window).width() < 768 ? cardsSliderInit() : (cardsSlider.trigger('destroy.owl.carousel'), newsPrevSlider.trigger('destroy.owl.carousel'));
-		});
-		$( window ).resize(function() {
-			$(window).width() < 768 ? cardsSliderInit() : (cardsSlider.trigger('destroy.owl.carousel'), newsPrevSlider.trigger('destroy.owl.carousel'));
-		});
 
 		$('.owl-carousel').on('translated.owl.carousel', function(event) {
 			var bLazy = new Blazy({});

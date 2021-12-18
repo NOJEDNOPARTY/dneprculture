@@ -7,7 +7,36 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    &-content {flex: 1 0 auto;}
+    &-content {
+        flex: 1 0 auto;
+        &-bg {
+            background: linear-gradient(87.78deg, #EDEDED 0%, #EAC9C2 99.95%);
+        }
+        &-bottom {
+            position: relative;
+            display: block;
+            width: 100%;
+            min-height: 130px;
+            @media (max-width: 1100px) {
+                min-height: 80px;
+            }
+            &::before {
+                content: '';
+                display: block;
+                padding-top: 8%;
+            }
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
     & footer {flex: 0 0 auto;}
 }
 
@@ -20,11 +49,97 @@ html, body {
 }
 
 .section-block {
-    padding: 70px 0 45px;
-    @media (max-width: 1100px) {
-        padding: 40px 0;
+    min-height: 100%;
+    &-cnt {
+        padding: 30px 0 60px;
+        @media (max-width: 1100px) {
+            padding: 40px 0;
+        }
     }
 }
+
+
+.title {
+    font-family: 'HypatiaSansPro Bold';
+    font-size: 64px;
+    line-height: 74px;
+    color: #535D69;
+    @media (max-width: 1200px) {
+        font-size: 48px;
+        line-height: 58px;
+    }
+    @media (max-width: 992px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+.title-m {
+    font-family: 'HypatiaSansPro Bold';
+    font-size: 36px;
+    line-height: 41px;
+    color: #535D69;
+    @media (max-width: 1200px) {
+        font-size: 32px;
+        line-height: 28px;
+    }
+    @media (max-width: 992px) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.subtitle {
+    font-family: 'HypatiaSansPro Bold';
+    font-size: 36px;
+    line-height: 41px;
+    color: #FFFFFF;
+    @media (max-width: 1200px) {
+        font-size: 28px;
+        line-height: 33px;
+    }
+    @media (max-width: 992px) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 20px;
+        @media (max-width: 992px) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.p {
+    &-quote {
+        padding: 25px 28px;
+        font-family: 'HypatiaSansPro Regular';
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+        background: #B6391E;
+        @media (max-width: 1200px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        @media (max-width: 992px) {
+            padding: 25px 15px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+.text-white {
+    color: #fff;
+}
+
+// components
 
 .social {
     display: flex;
@@ -72,6 +187,88 @@ html, body {
         transition: 0.3s ease;
         &:hover {
             color: #F5AF19;
+        }
+    }
+}
+
+.date-item {
+    display: inline-block;
+    padding: 0 25px;
+    font-family: 'HypatiaSansPro Bold';
+    font-size: 13px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    background: #B6391E;
+    border-radius: 25px;
+    &:hover {color: #fff;}
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    & .page-numbers {
+        display: inline-block;
+        font-family: 'HypatiaSansPro Bold';
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #535D69;
+        transition: 0.3s ease;
+        &:hover,
+        &.current {
+            color: #B6391E;
+        }
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
+    }
+    & .prev,
+    & .next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        min-height: 38px;
+        border: 1px solid #B6391E;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        & svg {
+            & path {
+                transition: 0.3s ease;
+            }
+        }
+        &:hover {
+            background-color: #B6391E;
+            & svg {
+                & path {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+}
+
+.link-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    & span {
+        display: inline-block;
+        font-family: 'HypatiaSansPro Bold';
+        font-size: 13px;
+        line-height: 13px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #B6391E;
+        &:not(:last-child) {
+            margin-right: 10px;
         }
     }
 }

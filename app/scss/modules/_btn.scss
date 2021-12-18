@@ -1,8 +1,7 @@
 .btn {
     display: inline-block;
     padding: 0 35px;
-    border: 2px solid #B6391E;
-    background-color: transparent;
+    background-color: #B6391E;
     transition: 0.3s ease;
     @media (max-width: 992px) {
         padding: 0 24px;
@@ -13,10 +12,10 @@
         justify-content: center;
         font-family: 'HypatiaSansPro Regular';
         font-size: 16px;
-        line-height: 40px;    
+        line-height: 60px;    
         text-align: center;
         text-transform: uppercase;
-        color: #B6391E;
+        color: #fff;
         transition: 0.3s ease;
         @media (max-width: 992px) {
             font-size: 14px;
@@ -24,7 +23,75 @@
         }
     }
     &:hover {
-        background-color: #B6391E;
-        & .btn-el {color: #fff;}
+        background-color: #A02C13;
+    }
+    &-arrow {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border: 1px solid  #F5AF19;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        &-main {
+            background: #F5AF19;
+            &:hover {
+                background: #B6391E;
+                border: 1px solid  #B6391E;
+            }
+        }
+        &-border {
+            border: 1px solid #B6391E;
+            & svg {
+                & path {
+                    stroke: #B6391E;
+                    transition: 0.3s ease;
+                }
+            }
+            &:hover {
+                background-color: #B6391E;
+                & svg {
+                    & path {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 79px;
+        min-width: 79px;
+        height: 79px;
+        border-radius: 50%;
+        @media (max-width: 992px) {
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
+        }
+        &-yellow {
+            background: rgba(245, 175, 25, 0.5);
+            border: 10px solid rgba(245, 175, 25, 0.5);
+            @media (max-width: 992px) {
+                border: 6px solid rgba(245, 175, 25, 0.5);
+            }
+        }
+        & img {
+            width: auto;
+            max-width: 30px;
+            @media (max-width: 992px) {
+                max-width: 20px;
+            }
+        }
+        &-orange {
+            background: #B6391E;
+            border: 10px solid rgba(245, 175, 25, 0.5);
+            @media (max-width: 992px) {
+                border: 6px solid rgba(245, 175, 25, 0.5);
+            }
+        }
     }
 }

@@ -1,0 +1,229 @@
+
+
+.info-block {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    & p {
+        font-family: 'HypatiaSansPro Regular';
+        font-size: 18px;
+        line-height: 24px;
+        color: #232323;
+        @media (max-width: 992px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+            @media (max-width: 992px) {
+                margin-bottom: 10px;
+            }
+        }
+        & span {
+            color: #B6391E;
+        }
+    }
+    & img {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+            @media (max-width: 992px) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    & a:not(.btn)  {
+        font-family: 'HypatiaSansPro Regular';
+        font-size: 18px;
+        line-height: 24px;
+        color: #232323;
+        @media (max-width: 992px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &:hover {
+            color: #B6391E;
+            text-decoration: none;
+        }
+    }
+    & h1 {
+        font-family: 'HypatiaSansPro Bold';
+        font-size: 64px;
+        line-height: 74px;
+        color: #535D69;
+        @media (max-width: 1200px) {
+            font-size: 48px;
+            line-height: 58px;
+        }
+        @media (max-width: 992px) {
+            font-size: 36px;
+            line-height: 42px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+    & h2 {
+        font-family: 'HypatiaSansPro Bold';
+        font-size: 36px;
+        line-height: 41px;
+        color: #535D69;
+        @media (max-width: 1200px) {
+            font-size: 32px;
+            line-height: 28px;
+        }
+        @media (max-width: 992px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    & h3 {
+        font-family: 'HypatiaSansPro Bold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 32px;
+        color: #535D69;
+        @media (max-width: 992px) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+            @media (max-width: 992px) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    & h4 {
+        font-family: 'HypatiaSansPro Bold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: #232323;
+        @media (max-width: 992px) {
+            font-size: 22px;
+            line-height: 24px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+            @media (max-width: 992px) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    & h5 {
+        font-family: 'HypatiaSansPro Bold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        color: #232323;
+        @media (max-width: 992px) {
+            font-size: 19px;
+            line-height: 23px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+            @media (max-width: 992px) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    ol {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        counter-reset: my-awesome-counter;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            @media (max-width: 992px) {
+                margin-bottom: 20px;
+            }
+        }
+        & > li {
+            position: relative;
+            padding-left: 18px;
+            counter-increment: my-awesome-counter;
+            font-family: 'HypatiaSansPro Regular';
+            font-size: 18px;
+            line-height: 24px;
+            color: #232323;
+            @media (max-width: 992px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 15px;
+                @media (max-width: 992px) {
+                    margin-bottom: 10px;
+                }
+            }
+            & span {
+                color: #B6391E;
+            }
+            &::before {
+                content: counter(my-awesome-counter);
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: 'HypatiaSansPro Bold';
+                color: #B6391E;
+            }
+        }
+    }
+    & ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+            @media (max-width: 992px) {
+                margin-bottom: 20px;
+            }
+        }
+        & > li {
+            position: relative;
+            padding-left: 18px;
+            font-family: 'HypatiaSansPro Regular';
+            font-size: 18px;
+            line-height: 24px;
+            color: #232323;
+            @media (max-width: 992px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 15px;
+                @media (max-width: 992px) {
+                    margin-bottom: 10px;
+                }
+            }
+            & span {
+                color: #B6391E;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 0;
+                display: block;
+                width: 8px;
+                height: 8px;
+                background-color: #B6391E;
+                border-radius: 50%;
+                @media (max-width: 992px) {
+                    top: 6px;
+                }
+            }
+        }
+    }
+    & b {
+        font-family: 'HypatiaSansPro Bold';
+        color: #232323;
+    }
+}
