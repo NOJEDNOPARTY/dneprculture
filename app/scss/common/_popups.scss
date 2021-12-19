@@ -1,11 +1,66 @@
-
-// popup
-
-
 .popup {
+    position: relative;
     width: 100%;
-    max-width: 954px;
+    padding: 204px 20px 223px;
+    max-width: 705px;
+    margin: 20px 0;
     background-color: #fff;
+    background-image: url('../images/thanks2.png'), url('../images/thanks1.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 75px, 100% 127px;
+    background-position: top left, bottom left;
+    @media (max-width: 767px) {
+        padding: 60px 20px 70px;
+        margin: 10px 0;
+        background-size: 100% 35px, 100% 45px;
+    } 
+    & .popup-close {
+        cursor: pointer;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 38px;
+        max-width: 38px;
+        height: 38px;
+        background: #B6391E;
+        transition: 0.3s ease;
+        & svg path {
+            transition: 0.3s ease;
+        }
+        &:hover {
+            background: #A02C13;
+            & svg path {
+                fill: #F5AF19;
+            }
+        }
+        @media (max-width: 767px) {
+            top: 10px;
+            right: 15px;
+        } 
+        & img  {
+            width: 100%;
+        }
+    }
+    & h3 {
+        font-family: 'HypatiaSansPro Bold';
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #B6391E;
+        @media (max-width: 767px) {
+            font-size: 20px;
+            line-height: 26px;
+        } 
+        & span {
+            display: block;
+            text-transform: initial;
+            color: #535D69;
+        }
+    }
     &-wrapper {
         position: fixed;
         top: 0;
@@ -42,16 +97,27 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        width: 100%;
-        max-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 38px;
+        max-width: 38px;
+        height: 38px;
+        background: #B6391E;
+        transition: 0.3s ease;
+        & svg path {
+            transition: 0.3s ease;
+        }
+        &:hover {
+            background: #A02C13;
+            & svg path {
+                fill: #F5AF19;
+            }
+        }
         @media (max-width: 767px) {
             top: 10px;
             right: 15px;
-            max-width: 22px;
         } 
-        & img  {
-            width: 100%;
-        }
     }
     
 }
